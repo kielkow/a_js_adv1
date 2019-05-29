@@ -63,9 +63,14 @@
     
         var n1 = new Negociacao(new Date(), 5, 700)
         console.log(n1)
-        var volume = n1.obtemVolume()
-        console.log(volume)
+        console.log(n1.volume)
+        console.log(n1.data)
+        console.log(n1.quantidade)
+        console.log(n1.valor)
 
+        //caso queira mudar o valor do atributo
+        n1._quantidade = 5000
+        console.log(n1.quantidade)
 
         
     </script>
