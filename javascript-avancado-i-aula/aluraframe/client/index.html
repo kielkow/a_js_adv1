@@ -60,19 +60,21 @@
     </table>
     <script src="js/app/models/Negociacao.js"></script>
     <script>
-    
-        var n1 = new Negociacao(new Date(), 5, 700)
+
+         var n1 = new Negociacao(new Date(), 5, 700)
+
         console.log(n1)
         console.log(n1.volume)
         console.log(n1.data)
         console.log(n1.quantidade)
         console.log(n1.valor)
 
-        //caso queira mudar o valor do atributo
-        n1._quantidade = 5000
+        n1._quantidade = 5000      //caso queira mudar o valor do atributo
         console.log(n1.quantidade)
 
-        
+        n1._data.setDate(11)       //Usado para mudar o valor do atributo mesmo com ele congelado
+        console.log(n1._data)
+
     </script>
 </body>
 </html>
