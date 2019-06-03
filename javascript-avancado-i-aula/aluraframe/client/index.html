@@ -11,7 +11,7 @@
     
     <h1 class="text-center">Negociações</h1>
     
-    <form class="form">
+    <form class="form" onsubmit="negociacaoController.adiciona(event)">
         
         <div class="form-group">
             <label for="data">Data</label>
@@ -59,24 +59,9 @@
         </tfoot>
     </table>
     <script src="js/app/models/Negociacao.js"></script>
+    <script src="js/app/controllers/NegociacaoController.js"></script>
     <script>
-
-        let hoje = new Date()
-
-        let n1 = new Negociacao(hoje, 5, 700)
-
-        console.log(n1)
-        console.log(n1.volume)
-        console.log(n1.data)
-        console.log(n1.quantidade)
-        console.log(n1.valor)
-
-        n1._quantidade = 5000      //caso queira mudar o valor do atributo
-        console.log(n1.quantidade)
-
-        n1._data.setDate(11)       //Usado para mudar o valor do atributo mesmo com ele congelado
-        console.log(n1._data)
-        
+        let negociacaoController = new NegociacaoController()
     </script>
 </body>
 </html>
