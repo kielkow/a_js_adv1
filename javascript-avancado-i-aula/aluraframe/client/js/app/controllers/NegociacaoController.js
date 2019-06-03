@@ -15,8 +15,11 @@ class NegociacaoController {
         let data = new Date(this._inputData.value.replace(/-/g, ','))
         console.log(data)
 
-        let data2 = new Date(2016,10,11)
-        console.log(data2)
-        console.log(typeof(data2))
+        let teste = '2016-08-10'
+        let testando = teste.split('-')
+
+        let dataTeste = new Date(parseInt(testando[0], 10), parseInt(testando[1], 10),parseInt(testando[2], 10))
+        console.log(dataTeste)
+        console.log(testando)
     }
 }
