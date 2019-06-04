@@ -12,13 +12,18 @@ class NegociacaoController {
     adiciona(event) {
         event.preventDefault()
 
-        let data = new Date(this._inputData.value.replace(/-/g, ','))
+        let data = new Date(...this._inputData.value.split('-').map(function (item, indice) {
+            if (indice == 1) {
+                return item - 1
+            }
+            return item
+        }))
         console.log(data)
 
-        let teste = ('2016-08-10').split('-')
-
-        let dataTeste = new Date(parseInt(teste[0], 10), parseInt(teste[1], 10),parseInt(teste[2], 10))
+        /*  Minha versão
+        let teste = this._inputData.value.split('-')
+        let dataTeste = new Date(parseInt(teste[0]), parseInt(teste[1] - 1), parseInt(teste[2]))
         console.log(dataTeste)
-        console.log(teste)
+        */
     }
 }
