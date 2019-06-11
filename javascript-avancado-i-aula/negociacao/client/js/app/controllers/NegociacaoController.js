@@ -66,4 +66,29 @@ class NegociacaoController {
     var aprovados = avaliacoes.filter(prova => prova.nota >= 7).map(prova => prova.aluno.nome)
     console.log(aprovados)
     */
+
+    /*EXERCICIO4 --> retornar duas listas em uma
+
+        let lista1 = ['a', 'b', 'c']
+        let lista2 = ['d', 'e', 'f']
+
+        juntar(lista1,lista2){
+            return this.lista3 = [...lista1, ...lista2]
+        }
+        mostrar(lista){
+            lista.forEach(element => {
+                console.log(element)
+            });
+        }
+
+        this.mostrar(this.juntar(lista1, lista2))
+
+        Resolução do instrutor:
+        let lista1 = ['a', 'b', 'c']
+        let lista2 = ['d', 'e', 'f']
+        console.log([].concat(lista1, lista2))
+    */
+
+
+
 }
