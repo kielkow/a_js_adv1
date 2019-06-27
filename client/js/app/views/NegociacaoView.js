@@ -1,6 +1,6 @@
 class NegociacaoView {
 
-    constructor(elemento){
+    constructor(elemento) {
         this._elemento = elemento;
     }
 
@@ -17,7 +17,7 @@ class NegociacaoView {
                 </thead>
                 
                 <tbody>
-                    ${model.negociacoes.map(n => 
+                    ${model.negociacoes.map(n =>
                         `
                             <tr>
                                 <td>${DateHelper.dataParaTexto(n.data)}</td>
@@ -26,18 +26,30 @@ class NegociacaoView {
                                 <td>${n.volume}</td>
                             </tr>
                         `
-                    ).join('')}
+        ).join('')}
 
                 </tbody>
                 
                 <tfoot>
+                    <td colspan="3"></td>
+                    <td>
+                        ${model.negociacoes.reduce((total, n) => total + n.volume, 0.0)}
+                    </td>
                 </tfoot>
             </table>
         `
     }
 
-    update(model){
+    update(model) {
         this._elemento.innerHTML = this._template(model)
     }
+
+
+    //exercicio arrow function]
+
+    //numeros.reduce((total, num) => total * num, 1);
+    //let dobro = numeros.map((num) => num * 2);
+    //let metade = numeros.map((num) => num/2);
+    //let raiz = numeros.map((num) => Math.sqrt(num));
 
 }
