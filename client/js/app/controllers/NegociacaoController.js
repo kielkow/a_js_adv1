@@ -38,6 +38,14 @@ class NegociacaoController {
             this._inputValor.value)
     }
 
+    apaga(){
+        this._listaNegociacoes.esvazia();
+        this._negociacaoView._update(this._listaNegociacoes);
+    
+        this._mensagem.texto = 'Negociações apagadas com sucesso';
+        this._mensagemView._update(this._mensagem);
+    }
+
     _limpar() {
         this._inputData.value = ''
         this._inputQuantidade.value = 1
